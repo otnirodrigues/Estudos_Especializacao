@@ -1,5 +1,6 @@
 package com.variaveis;
 
+
 public class Teste_Variaveis {
 	
 	public static void main(String [] args) {
@@ -24,8 +25,10 @@ public class Teste_Variaveis {
 		Calculo_trimestre = Janeiro+Fevereiro+Marco;
 		media_gastos = Calculo_trimestre/3;
 		
-		System.out.println("Gastos Trimestrais: "+Calculo_trimestre);
-		System.out.println("Média de gastos Mensais: "+media_gastos);
+		media_gastos = (double)(Math.round(media_gastos)*1000.0/1000.0);
+		
+		System.out.println("Gastos Trimestrais: R$"+Calculo_trimestre);
+		System.out.println("Média de gastos Mensais: R$"+media_gastos);
 			
 	}
 
