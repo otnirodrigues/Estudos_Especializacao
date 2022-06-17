@@ -22,5 +22,20 @@ public class Conta {
 	public void depositar(double quantidade) {
 		this.saldo = quantidade + this.saldo;
 	}
+	
+	public boolean transferePara(Conta destino, double valor) {
+		if(this.saldo < valor) {
+			System.out.println("Transferencia não autorizada, saldo insuficiente!");
+			return false;
+		}else {
+			this.saldo = this.saldo - valor;
+			destino.saldo = destino.saldo + valor;
+			System.out.println("Transferencia realizada!!");
+			return true;
+		}
+		
+		
+		
+	}
 
 }
